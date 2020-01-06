@@ -58,7 +58,7 @@ async function validateCloudformation(filePath) {
 }
 
 (async () => {
-  const cloudFormationFile = core.getInput('cloudFormationPath');
+  const cloudFormationFile = core.getInput('cloud-formation-files');
 
   await validateCloudformation(cloudFormationFile);
   checkStatesMachineDefinitions(cloudFormationFile);
