@@ -1,12 +1,9 @@
-name: 'CloudFormation check'
-description: 'Check AWS CloudFormation files'
+name: "CloudFormation check"
+description: "Check AWS CloudFormation files"
 inputs:
-  cloudFormationPath: # id of input
-    description: 'Path of cloud formation file to check'
+  cloud-formation-files: # id of input
+    description: "Path of cloud formation files to check"
     required: true
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: "node12"
+  main: "index.js"
