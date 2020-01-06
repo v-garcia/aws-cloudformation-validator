@@ -48,7 +48,7 @@ function checkStatesMachineDefinitions(filePath) {
 
 async function validateCloudformation(filePath) {
   try {
-    await cfn.validate('eu-central-1', './operation.yaml', {});
+    await cfn.validate('eu-central-1', filePath, {});
     console.log(`✓ CloudFormation file: '${filePath}' is valid`);
   } catch (e) {
     console.error(`X CloudFormation is not valid`);
