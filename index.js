@@ -48,7 +48,7 @@ function checkStatesMachineDefinitions(filePath) {
 
 async function validateCloudformation(filePath) {
   try {
-    await cfn.validate('eu-central-1', filePath, {});
+    await cfn.validate(process.env.AWS_REGION, filePath, {});
     console.log(`✓ CloudFormation file: '${filePath}' is valid`);
   } catch (e) {
     console.error(`X CloudFormation is not valid`);
